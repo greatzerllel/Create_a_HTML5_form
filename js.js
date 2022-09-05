@@ -121,13 +121,16 @@ console.log(card.value);
         delete errors['postalCode'];
     }
 
-    if (postalCode.value === '') {
-        errors['postalCode'] = 'postalCode no puede estar vacio';
-        postalCode.classList.add('is-invalid');
+    if (message.value === '') {
+        errors['message'] = 'message no puede estar vacio';
+        message.classList.add('is-invalid');
     } else {
-        postalCode.classList.remove('is-invalid');
-        delete errors['postalCode'];
+        message.classList.remove('is-invalid');
+        delete errors['message'];
     }
+
+
+
 
     
 
@@ -156,7 +159,7 @@ console.log(card.value);
         if (errors['card']) cardFeedback.innerHTML = errors['card'];
         if (errors['cvc']) cvcFeedback.innerHTML = errors['cvc'];
         if (errors['amount']) amountFeedback.innerHTML = errors['amount'];
-        if (errors['firstName']) firstNameFeedback.innerHTML = errors['firstName'];
+        if (errors['firstName']) nameFeedback.innerHTML = errors['firstName'];
         if (errors['lastName']) lastNameFeedback.innerHTML = errors['lastName'];
         if (errors['city']) cityFeedback.innerHTML = errors['city'];
         if (errors['state']) stateFeedback.innerHTML = errors['state'];
